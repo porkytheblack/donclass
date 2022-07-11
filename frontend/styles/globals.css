@@ -18,3 +18,23 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.pale-white-bg {
+  background-color: #b8ffe1 !important;
+}
+
+.greenish-color {
+  color: #015239 !important;
+}
+
+.greenish-bg {
+  background-color: #015239 !important;
+}
+
+.bluish-color {
+  color: #7d56fc !important;
+}
+
+.bluish-bg{
+  background-color: #7d56fc !important;
+}

@@ -3,6 +3,7 @@ import '../styles/vars.css'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { Typography } from 'antd'
 
 const GlobalStyles = createGlobalStyle`
   *{
@@ -16,6 +17,10 @@ const theme = {
     primary: "black"
   }
 }
+
+export const {Text} = Typography
+
+
 
 function MyApp({ Component, pageProps }: AppProps) {
 

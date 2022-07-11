@@ -21,7 +21,6 @@ const withAntdLess = require('next-plugin-antd-less');
 
 module.exports = withAntdLess({
   modifyVars: { 
-    '@primary-color': '#4e73df',
     '@success-color': "#1cc88a",
     '@warning-color': "#f6c23e",
     "@error-color": "#e74a3b",
