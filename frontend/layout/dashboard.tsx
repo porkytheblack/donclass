@@ -1,6 +1,7 @@
 import { Breadcrumb } from 'antd'
 import { useRouter } from 'next/router'
 import React, { ReactNode } from 'react'
+import styled from 'styled-components'
 import { course_regexp, quiz_regexp, tutorial_regexp } from '../globals'
 import { Link, Text } from '../pages/_app'
 import SideMenu from './Navigation/SideMenu'
@@ -19,14 +20,13 @@ function Dashboard({children}:{children: ReactNode | ReactNode[]}) {
 
     <div className="flex flex-row items-start justify-start w-screen h-screen">
         <SideMenu/>
-        <div className="flex flex-col items-start w-full  justify-start min-h-screen h-full p-[10px_20px]">
+        <Container className="flex flex-col items-start w-full justify-start min-h-screen h-full p-[10px_20px]">
           <div className="flex flex-row items-center  justify-start h-10 ">
             <Breadcrumb>
               <Breadcrumb.Item onClick={()=>{
                 on_bread_crumb_click("dashboard")
               }} >
               <Link className="font-semibold !text-blue-700 text-lg " >
-
                 Dashboard
               </Link>
               </Breadcrumb.Item>
@@ -46,10 +46,24 @@ function Dashboard({children}:{children: ReactNode | ReactNode[]}) {
           {
               children
           }
-        </div>
+        </Container>
         
     </div>
   )
 }
 
 export default Dashboard
+
+const Container = styled.div`
+  .child{
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+      background: none;
+      width: 5px;
+    }
+    &;;-webkit-scrollbar-thumb{
+      background: #7d56fc;
+      border-radius: 2.5px;
+    }
+  }
+`

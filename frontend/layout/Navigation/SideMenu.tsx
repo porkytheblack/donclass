@@ -15,7 +15,7 @@ function SideMenu() {
     
      
     const change_route = (val: string) =>{
-        if(["dashboard", "courses", "earnings", "account"].includes(val) && (pathname.split("/").length == 2 || pathname.split("/").length == 3)  ){
+        if(["dashboard", "courses", "earnings", "account", "inbox"].includes(val) && (pathname.split("/").length == 2 || pathname.split("/").length == 3)  ){
             if(val == "dashboard") return push("/dashboard").then(()=>{
                 set_active_routes(dashboard_routes.filter(({user})=> user == "instructor")[0].routes)
             })
@@ -58,7 +58,7 @@ function SideMenu() {
         }
     }, [active_layer])
    return (
-    <MenuContainer className="max-w-[200px] w-[200px] h-screen "  theme="dark" mode='vertical'  >
+    <MenuContainer className="max-w-[200px] w-[150px] h-screen "  theme="dark" mode='vertical'  >
         <Menu.Item disabled className="!p-[20px_10px] !h-[100px] !flex !flex-col !items-center !justify-center" >
             <UserAvatar/>
         </Menu.Item>

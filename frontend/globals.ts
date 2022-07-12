@@ -1,4 +1,4 @@
-import { ArrowLeftOutlined, BarChartOutlined, BookOutlined, CopyOutlined, DashboardOutlined, DollarOutlined, PaperClipOutlined, PlayCircleOutlined, QuestionOutlined, SettingOutlined, TeamOutlined, UserOutlined } from "@ant-design/icons";
+import { ArrowLeftOutlined, BarChartOutlined, BookOutlined, CopyOutlined, DashboardOutlined, DollarOutlined, MailOutlined, PaperClipOutlined, PlayCircleOutlined, QuestionOutlined, SettingOutlined, TeamOutlined, UserOutlined } from "@ant-design/icons";
 import React from "react"
 export const dashboard_routes = [
     {
@@ -87,6 +87,10 @@ export const dashboard_routes = [
             {
                 name: "account",
                 icon: UserOutlined
+            },
+            {
+                name: "inbox",
+                icon: MailOutlined
             }
         ]
     }
